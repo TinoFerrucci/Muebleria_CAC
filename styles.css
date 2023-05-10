@@ -1,5 +1,6 @@
 /* Estilos para la barra de navegación */
 nav {
+text-align: center;
 background-color: #333;
 color: #fff;
 height: 50px;
