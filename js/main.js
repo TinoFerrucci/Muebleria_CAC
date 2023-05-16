@@ -9,7 +9,16 @@ fetch("https://sheetdb.io/api/v1/42qk3gwtfyppb")
 function mostrarMuebles(muebles) {
   var body = "";
   for (mueble of muebles) {
-    body += `<tr><td>${mueble.id}</td><td>${mueble.nombre}</td><td>${mueble.stock}</td><td>${mueble.precio}</td></tr>`;
+    body += `<tr>
+                <td>${mueble.nombre}</td>
+                <td>${mueble.stock}</td>
+                <td>$${mueble.precio},00</td>
+                <td>
+                  <div class="contenedor_imagen_mueble">
+                    <img class="imagen_mueble" src="${mueble.imagen}">
+                  </div>
+                </td>
+              </tr>`;
   }
 
   document.getElementById("muebles").innerHTML = body;

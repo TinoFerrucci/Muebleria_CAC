@@ -67,6 +67,20 @@ section p {
     line-height: 1.5;
 }
 
+/* Estilos para la tabla de productos */
+table {
+    width: 100%;
+}
+.contenedor_imagen_mueble {
+    text-align: center;
+    height: 100px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+.imagen_mueble {
+    object-fit: fill;
+    height: 100%;
+}
 
 
 /* Estilos para el footer */
