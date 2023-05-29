@@ -1,18 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+
 body {
     margin: 0 auto;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(#495057, #6C757D, #ADB5BD, #CED4DA);
+}
+
+header {
+    position: sticky;
+    top: 0;
 }
 
 /* Estilos para la barra de navegación */
 nav {   
-    background-color: #333;
+    background-color: #343A40;
     color: #fff;
     height: auto;
     width: 100%;
     display: flex;
     padding: 0 20px;
+}
+
+nav > a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;   
+}
+
+nav .titulo-header {
+    font-size: 30px;
+    margin: auto 0;
 }
 
 nav ul {
@@ -72,37 +93,30 @@ main {
 
 .banner img {
     width: 100%;
+    height: calc(100vh - 50px);
+    object-fit: cover;
 }
-/* section {
-    margin: 0px ;
-    margin-bottom: 5px;
-    height: auto;
-}
-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-section p {
-    font-size: 16px;
-    line-height: 1.5;
-} */
 
-#section1,
-#section2,
-#section3,
-#section4 {
+section {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    scroll-margin-top: 50px;
+    font-size: 22px;
 }   
 
 .titulo-section {
     text-align: center;
+    font-weight: bold;
+    font-size: 40px;
 }
 
 #section1 {
     grid-area: section1;
+    margin: 0 auto;
+    
 }
 
 #section1 div {
@@ -143,10 +157,108 @@ section p {
     height: 100%;
 }
 
+td {
+    text-align: center;
+}
+
+
+#muebles {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+    gap: 40px;
+}
+
+.producto {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0 20px;
+    background-color: #fff;
+    width: 250px;
+    
+}
+
+.producto:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.producto img {
+    max-width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.producto p:last-child {
+    font-size: 14px;
+}
+
+.producto div:first-child {
+    height: 400px;
+}
+
+
 
 /* Estilos para el footer */
 footer {
-    background-color: #ccc;
+    background-color: #343A40;
     padding: 10px;
+    color: #fff;
     text-align: center;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.redes a img {
+    width: 40px
+}
+
+@media screen and (min-width: 320px) {
+    main {
+        grid-template-areas: "section1"
+                             "section2"
+                             "section3"
+                             "section4";
+    }
+    
+    header {
+        position: static;
+    }
+
+    nav {
+        display: block;    
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+        position: static;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    section {
+        scroll-margin-top: 0;
+    }
+    
+    #muebles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #muebles {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

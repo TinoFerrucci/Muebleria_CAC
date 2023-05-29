@@ -10,10 +10,13 @@
   <body>
     <header>
       <nav>
-        <div class="imagen-header">
-          <img src="images/logo.png" alt="logo">
-        </div>
-        <p class="titulo-header">Muebleria CAC</p>
+        <a href="#">
+          <div class="imagen-header">
+            <img src="images/logo.png" alt="logo">
+          </div>
+          <h1 class="titulo-header">Muebleria CAC</h1>
+
+        </a>
         <ul>
           <li><a href="#section1">Sobre Nosotros</a></li>
           <li><a href="#section2">Productos</a></li>
@@ -42,18 +45,7 @@
 
       <section id="section2">
         <h2 class="titulo-section" >Productos</h2>
-        <p>Insertar lista de productos</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Producto</th>
-              <th>Stock</th>
-              <th>Precio por unidad</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody id="muebles"></tbody>
-        </table>
+        <div id="muebles"></div>
       </section>
       
       <section id="section3">
@@ -85,13 +77,18 @@
             <label for="consulta" class="form-label">Consulta</label>
             <textarea class="form-control" id="consulta" rows="3" style="resize: none;"></textarea>
           </div>
-          <input class="btn btn-primary mb-3" type="button" value="Enviar" style="width: 100%;">
+          <input class="btn btn-primary mb-3" type="button" value="Enviar" style="width: 100%;" onclick="btnEnviar()">
         </form>        
       </section>
     </main>
 
     <footer>
-      <p>Terminos y condiciones</p>
+      <h5>Nuestras redes</h5>
+      <div class="redes">
+        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png"></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png"></a>
+      </div>
     </footer>
   </body>
     <!-- JS Bootstrap -->
