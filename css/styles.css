@@ -105,12 +105,13 @@ section {
     margin: 0 auto;
     scroll-margin-top: 50px;
     font-size: 22px;
+    margin-bottom: 10px;
 }   
 
 .titulo-section {
     text-align: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #section1 {
@@ -164,20 +165,20 @@ td {
 
 #muebles {
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    text-align: center;
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .producto {
     text-align: center;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 0 20px;
     background-color: #fff;
-    width: 250px;
-    
+    max-width: 250px;
+    box-shadow: 5px 5px 7px;
 }
 
 .producto:hover {
@@ -200,8 +201,6 @@ td {
     height: 400px;
 }
 
-
-
 /* Estilos para el footer */
 footer {
     background-color: #343A40;
@@ -221,7 +220,7 @@ footer {
     width: 40px
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 1024px) {
     main {
         grid-template-areas: "section1"
                              "section2"
@@ -231,15 +230,21 @@ footer {
     
     header {
         position: static;
+        
+        text-align: center;
     }
 
     nav {
         display: block;    
     }
 
+    nav a {
+        display: inline-block;
+    }
+
     nav ul {
         display: block;
-        text-align: center;
+        
         position: static;
     }
 
@@ -250,15 +255,7 @@ footer {
     section {
         scroll-margin-top: 0;
     }
-    
-    #muebles {
-        grid-template-columns: repeat(2, 1fr);
-    }
+   
 }
 
-@media screen and (min-width: 768px) {
-
-    #muebles {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+/* La pagina fue probada en distintos dispositivos como tablets y celulares, aparte de computadoras, por lo cual no vimos necesarios mas media queries */

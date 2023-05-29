@@ -1,5 +1,10 @@
 // Lista de muebles
 var muebles = [];
+const formulario = document.getElementById("formulario-contacto")
+const nombre = formulario.nombre;
+const apellido = formulario.apellido;
+const correo = formulario.email;
+const mensaje = formulario.mensaje;
 
 // Llamada a una API donde se ubican todos los muebles y sus atributos
 fetch("https://sheetdb.io/api/v1/42qk3gwtfyppb")
@@ -23,6 +28,40 @@ function mostrarMuebles(muebles) {
 }
 
 
-function btnEnviar() {
-  alert("Mensaje enviado!");
+
+function validarNombre(event){
+    if (nombre.value.length == 0){
+        alert("Debe ingresar un nombre en este campo")
+        event.preventDefault()
+    }
 }
+
+function validarApellido(event){
+    if (apellido.value.length == 0){
+        alert("Debe ingresar un apellido en este campo")
+        event.preventDefault()
+    }
+}
+
+function validarCorreo(event){
+    if (!correo.value.includes("@")){
+        alert("El correo ingresado no es valido")
+        event.preventDefault()
+    }
+}
+
+function validarMensaje(event){
+    if (mensaje.value.length == 0){
+        alert("Debe ingresar un mensaje en este campo")
+        event.preventDefault()
+    }
+}
+
+function validar(event){
+    validarNombre(event)
+    validarApellido(event)
+    validarCorreo(event)
+    validarMensaje(event)
+}
+
+formulario.addEventListener("submit", validar)
