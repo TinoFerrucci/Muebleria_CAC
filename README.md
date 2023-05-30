@@ -7,7 +7,7 @@ Integrantes:
 * Silvana Srdos Gorosito
 
 ### ¿Como instalar el proyecto?
-Para poder instalar el proyecto tenemos 2 formas, la más simple es accediendo al <a href=''>sitio web</a> o ingresando la siguiente linea de comando en nuestra terminal para poder clonar el repositorio en el local:
+Para poder instalar el proyecto tenemos 2 formas, la más simple es accediendo al [sitio web](https://muebleria-cac.netlify.app/) o ingresando la siguiente linea de comando en nuestra terminal para poder clonar el repositorio en el local:
  ```bash
 git clone https://github.com/TinoFerrucci/Muebleria_CAC
 ```
